@@ -46,7 +46,7 @@ a001 = LINE('bogelnew00@gmail.com','01dEs---')
 print('》》》》UNIT 001 READY《《《《')
 a002 = LINE('emalkembar@gmail.com','keeplove19')
 print('》》》》UNIT 002 READY《《《《')
-a003 = LINE('EMAIL','PASSWORD')
+a003 = LINE('xemoolemal@gmail.com','keeplove19')
 print('》》》》UNIT 003 READY《《《《\n')
 
 a001.log("[ M001D23 ]\n" + str(a001.authToken))

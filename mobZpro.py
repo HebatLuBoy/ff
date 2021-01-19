@@ -42,7 +42,7 @@ except ImportError:
 
 programStart = time.time()
 
-a001 = LINE('EMAIL','PASSWORD')
+a001 = LINE('bogelnew00@gmail.com','keeplove19')
 print('》》》》UNIT 001 READY《《《《')
 a002 = LINE('EMAIL','PASSWORD')
 print('》》》》UNIT 002 READY《《《《')

@@ -290,7 +290,7 @@ def sendTemplate(to, data):
     data = {"messages":[data]}
     requests.post(url, headers=headers, data=json.dumps(data))
 
-def allowLiff():
+def modeon():
     url = 'https://access.line.me/dialog/api/permissions'
     data = {
         'on': [

@@ -42,11 +42,11 @@ except ImportError:
 
 programStart = time.time()
 
-a001 = LINE('bogelnew00@gmail.com','01dEs---')
+a001 = LINE('EMAIL','PASSWORD')
 print('》》》》UNIT 001 READY《《《《')
-a002 = LINE('emalkembar@gmail.com','keeplove19')
+a002 = LINE('EMAIL','PASSWORD')
 print('》》》》UNIT 002 READY《《《《')
-a003 = LINE('xemoolemal@gmail.com','keeplove19')
+a003 = LINE('EMAIL','PASSWORD')
 print('》》》》UNIT 003 READY《《《《\n')
 
 a001.log("[ M001D23 ]\n" + str(a001.authToken))
@@ -111,7 +111,7 @@ proCmd = '''┏━━━━━━━━━━━━━━━━━
 groupCmd = '''┏━━━━━━━━━━━━━━━━━
 ┣━━━━ Group
 ┣ Ginfo
-┣ Join
+┣ Come
 ┣ Leave/Leave 1-3
 ┣ Invto [ Num ]
 ┣ Grouplist 1-3
@@ -123,7 +123,7 @@ groupCmd = '''┏━━━━━━━━━━━━━━━━━
 accessCmd = '''┏━━━━━━━━━━━━━━━━━
 ┣━━━━ Access
 ┣ Blacklist/Banlist
-┣ Clearban
+┣ Cban
 ┣ Abort/Eject
 ┣ Squad List
 ┣ View Bots/Access 
@@ -141,7 +141,7 @@ accessCmd = '''┏━━━━━━━━━━━━━━━━━
 
 optCmd ='''┏━━━━━━━━━━━━━━━━━
 ┣━━━━ Option
-┣ Allowliff
+┣ Flex
 ┣ Creator
 ┣ Respon/Ping
 ┣ Speed/Debug
@@ -1069,7 +1069,7 @@ async def mobanzu(op):
                         elif hlth == "settings":
                             if sender in creator or sender in owner or sender in admin or sender in staff:
                                 sendFooter(receiver,str(setCmd))
-                        elif hlth.startswith("allowliff"):
+                        elif hlth.startswith("flex"):
                             if sender in creator or sender in owner or sender in admin or sender in staff:
                                 try:
                                     allowLiff()
@@ -1131,10 +1131,10 @@ async def mobanzu(op):
                                     contact = a001.getContact(ls)
                                     cont = contact.mid
                                     a001.sendContact(receiver, cont)
-                        elif hlth == "ping":
-                            a001.sendMessage(receiver,"PING!!!")
-                            a002.sendMessage(receiver,"PING!!!")
-                            a003.sendMessage(receiver,"PING!!!")
+                        elif hlth == "woi":
+                            a001.sendMessage(receiver,"ɴʏᴀᴜᴛ ʙᴏꜱꜱ!!!")
+                            a002.sendMessage(receiver,"ɴʏᴀᴜᴛ ʙᴏꜱꜱ!!!")
+                            a003.sendMessage(receiver,"ɴʏᴀᴜᴛ ʙᴏꜱꜱ!!!")
                         elif hlth == "respon":
                             if sender in creator or sender in owner or sender in admin or sender in staff:
                                 a001.sendReplyMessage(reply,receiver,"[ {} ]".format(resp1))
@@ -1203,7 +1203,7 @@ async def mobanzu(op):
                                     a002.leaveGroup(receiver)
                                 if spl == "3":
                                     a003.leaveGroup(receiver)
-                        elif hlth == "join":
+                        elif hlth == "come":
                             if sender in creator or sender in owner or sender in admin:
                                 G = a001.getGroup(receiver)
                                 G.preventedJoinByTicket = False
@@ -1233,7 +1233,7 @@ async def mobanzu(op):
                                         sendMention(to, msgas, h[aa*20:(aa+1)*20])
                                 else:
                                     a001.sendReplyMessage(reply,receiver,"[ Doesn't Have Any Blacklist User ]")
-                        elif hlth == "clearban":
+                        elif hlth == "cban":
                             if sender in creator or sender in owner or sender in admin:
                                 if len(status["blacklist"]) > 0:
                                     a001.sendReplyMessage(reply,receiver, "[ {} User Cleared ]".format(len(status["blacklist"])))
